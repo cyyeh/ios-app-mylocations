@@ -27,9 +27,19 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
   var lastGeocodingError: Error?
   var timer: Timer?
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.isNavigationBarHidden = true
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     updateLabels()
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    navigationController?.isNavigationBarHidden = false
   }
   
   // MARK:- CLLocationManagerDelegate
@@ -123,6 +133,15 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       startLocationManager()
     }
     updateLabels()
+  }
+  
+  // MARK:- Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "TagLocation" {
+      let controller = segue.destination as! LocationDetailsViewController
+      controller.coordinate = location!.coordinate
+      controller.placemark = placemark
+    }
   }
   
   // MARK:- Helper Methods
