@@ -23,6 +23,7 @@
 		E8A135652266B1BA00391EF7 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A135642266B1BA00391EF7 /* LocationCell.swift */; };
 		E8A135682266C85300391EF7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A135672266C85300391EF7 /* MapKit.framework */; };
 		E8A1356A2266C89A00391EF7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A135692266C89A00391EF7 /* MapViewController.swift */; };
+		E8A1356C22670EFC00391EF7 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1356B22670EFC00391EF7 /* UIImage+Resize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E8A135642266B1BA00391EF7 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		E8A135672266C85300391EF7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E8A135692266C89A00391EF7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E8A1356B22670EFC00391EF7 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				E8A1354A226573A300391EF7 /* LaunchScreen.storyboard */,
 				E8A1354D226573A300391EF7 /* Info.plist */,
 				E8A135592265CBA000391EF7 /* Functions.swift */,
+				E8A1356B22670EFC00391EF7 /* UIImage+Resize.swift */,
 				E8A1355B2265DE2300391EF7 /* DataModel.xcdatamodeld */,
 			);
 			path = MyLocations;
@@ -187,6 +190,7 @@
 				E8A1355D2265DE2300391EF7 /* DataModel.xcdatamodeld in Sources */,
 				E8A135582265C61200391EF7 /* HudView.swift in Sources */,
 				E8A135612265EC1300391EF7 /* Location+CoreDataProperties.swift in Sources */,
+				E8A1356C22670EFC00391EF7 /* UIImage+Resize.swift in Sources */,
 				E8A1355A2265CBA000391EF7 /* Functions.swift in Sources */,
 				E8A135652266B1BA00391EF7 /* LocationCell.swift in Sources */,
 				E8A1356A2266C89A00391EF7 /* MapViewController.swift in Sources */,

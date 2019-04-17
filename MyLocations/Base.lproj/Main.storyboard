@@ -188,11 +188,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sFf-TP-vJR">
+                                                    <rect key="frame" x="97" y="11" width="236" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="oqm-OK-Krn"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="YCi-Xl-XFj" firstAttribute="centerY" secondItem="csv-1Q-y8C" secondAttribute="centerY" id="9wI-pi-haV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="sFf-TP-vJR" secondAttribute="trailing" id="Elm-ft-ccg"/>
+                                                <constraint firstItem="sFf-TP-vJR" firstAttribute="top" secondItem="csv-1Q-y8C" secondAttribute="topMargin" id="WXc-7z-9TB"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YCi-Xl-XFj" secondAttribute="trailing" constant="20" symbolic="YES" id="XxF-Di-aA0"/>
                                                 <constraint firstItem="YCi-Xl-XFj" firstAttribute="leading" secondItem="csv-1Q-y8C" secondAttribute="leadingMargin" id="d9V-f4-k3B"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="sFf-TP-vJR" secondAttribute="trailing" id="eFs-hJ-Ebx"/>
+                                                <constraint firstItem="sFf-TP-vJR" firstAttribute="top" secondItem="csv-1Q-y8C" secondAttribute="topMargin" id="fu4-Us-iN4"/>
+                                                <constraint firstItem="sFf-TP-vJR" firstAttribute="leading" secondItem="YCi-Xl-XFj" secondAttribute="trailing" id="gHd-gz-toJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sFf-TP-vJR" secondAttribute="bottom" id="isn-qk-IR7"/>
+                                                <constraint firstItem="sFf-TP-vJR" firstAttribute="leading" secondItem="YCi-Xl-XFj" secondAttribute="trailing" id="qch-H8-VRj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sFf-TP-vJR" secondAttribute="bottom" id="tmW-Xc-oF1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -322,10 +336,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="YCi-Xl-XFj" id="IfX-4v-tRS"/>
                         <outlet property="addressLabel" destination="n0l-rG-CqL" id="rZv-YK-mzd"/>
                         <outlet property="categoryLabel" destination="Ov4-oe-EcM" id="RsZ-5i-FL8"/>
                         <outlet property="dateLabel" destination="cdO-v0-3Qb" id="CQu-AT-4gM"/>
                         <outlet property="descriptionTextView" destination="NSd-2H-nHo" id="nhJ-D9-DPw"/>
+                        <outlet property="imageHeight" destination="oqm-OK-Krn" id="ceM-Lm-Dcb"/>
+                        <outlet property="imageView" destination="sFf-TP-vJR" id="kTS-7h-ODo"/>
                         <outlet property="latitudeLabel" destination="XtS-85-6DN" id="7JJ-bL-Jag"/>
                         <outlet property="longitudeLabel" destination="lLc-hU-azL" id="dXs-4h-O6T"/>
                     </connections>
@@ -412,30 +429,38 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wat-2I-fec">
-                                            <rect key="frame" x="16" y="7" width="343" height="21"/>
+                                            <rect key="frame" x="76" y="7" width="95" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cin-MS-1LO">
-                                            <rect key="frame" x="16" y="30" width="343" height="17"/>
+                                            <rect key="frame" x="76" y="30" width="53" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="apA-aQ-WOn">
+                                            <rect key="frame" x="16" y="2" width="52" height="52"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="wat-2I-fec" firstAttribute="leading" secondItem="Cin-MS-1LO" secondAttribute="leading" id="Eg8-6R-F0R"/>
+                                        <constraint firstItem="wat-2I-fec" firstAttribute="leading" secondItem="31B-a3-Zi9" secondAttribute="leading" constant="76" id="PKB-WS-qNa"/>
                                         <constraint firstItem="Cin-MS-1LO" firstAttribute="top" secondItem="wat-2I-fec" secondAttribute="bottom" constant="2" id="TRW-Y0-cD6"/>
-                                        <constraint firstItem="wat-2I-fec" firstAttribute="trailing" secondItem="31B-a3-Zi9" secondAttribute="trailingMargin" id="UsI-kS-TIU"/>
-                                        <constraint firstItem="wat-2I-fec" firstAttribute="trailing" secondItem="Cin-MS-1LO" secondAttribute="trailing" id="fdr-Oq-NVV"/>
-                                        <constraint firstItem="wat-2I-fec" firstAttribute="leading" secondItem="31B-a3-Zi9" secondAttribute="leadingMargin" id="rOD-yV-8hg"/>
+                                        <constraint firstItem="wat-2I-fec" firstAttribute="trailing" secondItem="31B-a3-Zi9" secondAttribute="trailingMargin" constant="-188" id="UsI-kS-TIU"/>
+                                        <constraint firstItem="apA-aQ-WOn" firstAttribute="leading" secondItem="31B-a3-Zi9" secondAttribute="leading" constant="16" id="YqD-8Y-X5G"/>
+                                        <constraint firstAttribute="bottom" secondItem="apA-aQ-WOn" secondAttribute="bottom" constant="3.5" id="eFV-tg-Nda"/>
+                                        <constraint firstItem="wat-2I-fec" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cin-MS-1LO" secondAttribute="trailing" id="fdr-Oq-NVV"/>
+                                        <constraint firstItem="Cin-MS-1LO" firstAttribute="leading" secondItem="31B-a3-Zi9" secondAttribute="leading" constant="76" id="iRY-I1-m8Z"/>
+                                        <constraint firstItem="apA-aQ-WOn" firstAttribute="top" secondItem="31B-a3-Zi9" secondAttribute="top" constant="2" id="iz5-Ok-qBK"/>
+                                        <constraint firstItem="wat-2I-fec" firstAttribute="leading" secondItem="apA-aQ-WOn" secondAttribute="trailing" constant="8" id="v4v-2s-59J"/>
                                         <constraint firstItem="wat-2I-fec" firstAttribute="top" secondItem="31B-a3-Zi9" secondAttribute="topMargin" constant="-4" id="vPH-1S-FD8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="Cin-MS-1LO" id="2fE-b2-Ryl"/>
                                     <outlet property="descriptionLabel" destination="wat-2I-fec" id="MKG-go-N58"/>
+                                    <outlet property="photoImageView" destination="apA-aQ-WOn" id="g1h-g0-7Jy"/>
                                     <segue destination="JRZ-9v-KgK" kind="show" identifier="EditLocation" id="FDE-6a-j4D"/>
                                 </connections>
                             </tableViewCell>
@@ -555,6 +580,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wmQ-Gg-c26"/>
+        <segue reference="FDE-6a-j4D"/>
     </inferredMetricsTieBreakers>
 </document>
