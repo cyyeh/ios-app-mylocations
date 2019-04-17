@@ -31,14 +31,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let tabController = window!.rootViewController as! UITabBarController
     
     if let tabViewControllers = tabController.viewControllers {
+      // first tab
       var navController = tabViewControllers[0] as! UINavigationController
       let controller1 = navController.viewControllers.first as! CurrentLocationViewController
-      
       controller1.managedObjectContext = managedObjectContext
-      
+      // second tab
       navController = tabViewControllers[1] as! UINavigationController
       let controller2 = navController.viewControllers.first as! LocationsViewController
       controller2.managedObjectContext = managedObjectContext
+      // third tab
+      navController = tabViewControllers[2] as! UINavigationController
+      let controller3 = navController.viewControllers.first as! MapViewController
+      controller3.managedObjectContext = managedObjectContext
     }
     
     listenForFatalCoreDataNotifications()
