@@ -1,7 +1,7 @@
 # My Locations
 
 <p align="center">
-<img src="/mylocations" width="50%" />
+<img src="/mylocations.gif" width="50%" />
 </p>
 
 - Project Description: An app for storing favorite locations with pictures/photos captured 
